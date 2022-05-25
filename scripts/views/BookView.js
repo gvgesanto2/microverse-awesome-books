@@ -25,7 +25,7 @@ export default class BookView {
     const removeBtn = createNodeElem({
       tag: 'button',
       text: 'Remove',
-      className: 'btn'
+      className: 'btn btn--remove',
     });
     removeBtn.type = 'button';
     removeBtn.addEventListener('click', () => { this.removeCallback(id); });
