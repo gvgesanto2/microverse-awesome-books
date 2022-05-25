@@ -1,0 +1,186 @@
+/* Variables */
+:root {
+  /* Color Palette */
+  --color-primary: #1db954;
+  --color-error: rgb(212, 58, 58);
+  --color-grey-dark-1: #58585a;
+  --color-grey-dark-2: #333;
+  --color-grey-light-1: #f4f4f4;
+  --color-grey-light-2: #cfd8dc;
+  --color-grey-light-3: #b3bac5;
+
+  /* Other Color Variables */
+  --color-text: --color-grey-dark-2;
+}
+
+/* Resetting */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Base Styles */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  font-size: 1.6rem;
+  color: var(--color-text);
+  font-family: 'Radio Canada', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Main Content Component  */
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 2rem;
+}
+
+/* Title Component  */
+
+.title {
+  align-self: center;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+/* Books Section Component  */
+
+.books {
+  width: 100%;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgb(100, 100, 100);
+  display: flex;
+  flex-direction: column;
+}
+
+.books .title {
+  margin-bottom: 2rem;
+}
+
+/* Books List Component  */
+
+.books-list li:nth-child(odd) {
+  background-color: var(--color-grey-dark-1);
+  color: #fff;
+}
+
+.books-list li:nth-child(even) {
+  background-color: var(--color-grey-light-1);
+}
+
+/* Book Component */
+
+.book {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 3rem;
+}
+
+.book-info {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.book-info h3 {
+  margin-right: 1rem;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+/* Button Component */
+
+.btn {
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn--remove {
+  background-color: var(--color-error);
+  color: #fff;
+}
+
+/* Input Component */
+
+.input {
+  width: 100%;
+  height: 4.8rem;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: #fff;
+  border: 1px solid var(--color-grey-light-2);
+  border-radius: 0.8rem;
+  padding: 1.5rem 3.8rem 1.5rem 1.6rem;
+}
+
+.input::-webkit-input-placeholder,
+.input::placeholder {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: var(--color-grey-light-3);
+}
+
+.input:focus {
+  outline-color: var(--color-primary);
+}
+
+/* Add-New Section Component */
+
+.add-new {
+  text-align: center;
+}
+
+.add-new .title {
+  margin-bottom: 2rem;
+}
+
+/* Add-Book Form Component */
+
+.add-book-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-book-form .btn {
+  align-self: flex-end;
+}
+
+.add-book-form > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
