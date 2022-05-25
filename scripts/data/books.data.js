@@ -1,13 +1,7 @@
+import Book from '../models/Book.js';
+
 const initialBooks = [
-  {
-    id: 1,
-    title: 'Crazy things',
-    author: 'Jhon Doe',
-  },
-  {
-    id: 2,
-    title: 'Big decisions',
-    author: 'Jane Doe',
-  },
+  new Book('Crazy things', 'Jhon Doe', 'm_l3l5hkur_uck9sw8kkybjtgxaetosg'),
+  new Book('Big decisions', 'Jane Doe', 'w_l3l5gujj_y1yccnpjw2bwsctijodtp'),
 ];
 export default initialBooks;
