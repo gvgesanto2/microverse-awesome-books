@@ -1,5 +1,95 @@
 * {
-  margin: 10px;
   box-sizing: border-box;
   padding: 0;
+  margin: 0;
 }
+
+html {
+  font-size: 62.5%;
+ }
+ 
+body{
+   background-color:white;
+   font-size: 1.6rem;
+   color:#333;
+   font-family: 'Radio Canada', sans-serif;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
+
+button{
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding:5rem 2rem;
+}
+
+.books{
+  width: 100%;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgb(100, 100, 100);
+  display: flex;
+  flex-direction: column;
+}
+
+.books .title{
+  margin-bottom: 2rem;
+}
+
+.books-list li:nth-child(odd){
+  background-color: #58585a;
+  color: #f4f4f4;
+}  
+.books-list li:nth-child(even){
+  background-color: #f4f4f4;
+}
+
+.book{
+  display: flex;
+  padding: 1.5rem 3rem;
+}
+
+.book-info{
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.book-info h3{
+  margin-right: 1rem;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.btn{
+ background-color:#1DB954;
+ color: white;
+ padding: 1.2rem 2.4rem;
+ border: none;
+ border-radius: 4px;
+ transition: all 0.2s;
+}
+
+.btn:hover{
+  opacity: 0.9;
+}
+
+.title{
+align-self: center;
+font-size: 3rem;
+font-weight: 600;
+}
+

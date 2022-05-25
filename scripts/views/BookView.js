@@ -14,14 +14,18 @@ export default class BookView {
   createElem() {
     const { id, title, author } = this.book;
     const bookItem = document.createElement('li');
+    bookItem.className = 'book';
     bookItem.id = this.id;
     bookItem.innerHTML = `
-      <h2>${title}</h2>
-      <p>${author}</p>
+      <div class="book-info">
+        <h3>${title}</h3>
+        <p>by ${author}</p>
+      <div/>
     `;
     const removeBtn = createNodeElem({
       tag: 'button',
       text: 'Remove',
+      className: 'btn'
     });
     removeBtn.type = 'button';
     removeBtn.addEventListener('click', () => { this.removeCallback(id); });

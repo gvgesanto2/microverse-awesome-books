@@ -13,6 +13,7 @@ export default class BooksListView {
   render(parentElemId) {
     const parentElem = document.getElementById(parentElemId);
     const booksListElem = document.createElement('ul');
+    booksListElem.className = 'books-list';
     booksListElem.id = this.id;
     this.books.forEach((book) => {
       const bookView = new BookView(book, this.removeBookCallback);
