@@ -1,3 +1,4 @@
+/* Variables */
 :root {
   /* Color Palette */
   --color-primary: #1db954;
@@ -12,11 +13,15 @@
   --color-text: --color-grey-dark-2;
 }
 
+/* Resetting */
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
+/* Base Styles */
 
 html {
   font-size: 62.5%;
@@ -42,6 +47,8 @@ button {
   cursor: pointer;
 }
 
+/* Main Content Component  */
+
 .main {
   display: flex;
   align-items: center;
@@ -49,6 +56,16 @@ button {
   justify-content: center;
   padding: 5rem 2rem;
 }
+
+/* Title Component  */
+
+.title {
+  align-self: center;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+/* Books Section Component  */
 
 .books {
   width: 100%;
@@ -63,13 +80,18 @@ button {
   margin-bottom: 2rem;
 }
 
+/* Books List Component  */
+
 .books-list li:nth-child(odd) {
   background-color: var(--color-grey-dark-1);
   color: #fff;
 }
+
 .books-list li:nth-child(even) {
   background-color: var(--color-grey-light-1);
 }
+
+/* Book Component */
 
 .book {
   display: flex;
@@ -88,6 +110,8 @@ button {
   font-weight: 500;
   font-size: 1.8rem;
 }
+
+/* Button Component */
 
 .btn {
   font-size: 1.4rem;
@@ -109,11 +133,7 @@ button {
   color: #fff;
 }
 
-.title {
-  align-self: center;
-  font-size: 3rem;
-  font-weight: 600;
-}
+/* Input Component */
 
 .input {
   width: 100%;
@@ -140,6 +160,8 @@ button {
   outline-color: var(--color-primary);
 }
 
+/* Add-New Section Component */
+
 .add-new {
   text-align: center;
 }
@@ -147,6 +169,8 @@ button {
 .add-new .title {
   margin-bottom: 2rem;
 }
+
+/* Add-Book Form Component */
 
 .add-book-form {
   display: flex;
