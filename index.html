@@ -5,23 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;600&display=swap" rel="stylesheet">
     <title>Awesome Books</title>
   </head>
   <body>
-    <header>
-      <h1>Awesome books</h1>
-      <br><br>
+    <header class="header">
     </header>
-    <main>
-      <section id="books">
+    <main class="main">
+      <section id="books" class="books">
+        <h2 class="title">All awesome books</h2>
       </section>
-      <section id="add-new">
-        <form id="add-book-form" action="#">
-          <input id="title" type="text" name="title" placeholder="Enter the book's title" aria-label="title">
+      <section id="add-new" class="add-new">
+        <h2 class="title">Add a new book</h2>
+        <form id="add-book-form" action="#" class="add-book-form">
+          <input id="title" type="text" name="title" placeholder="Enter the book's title" aria-label="title" class="input">
           <br><br>
-          <input id="author" type="text" name="author" placeholder="Enter the book's author" aria-label="author">
+          <input id="author" type="text" name="author" placeholder="Enter the book's author" aria-label="author" class="input">
           <br><br>
-          <button type="submit">Add</button>
+          <button type="submit" class="add">Add</button>
         </form>
       </section>
     </main>
