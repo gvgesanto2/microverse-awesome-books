@@ -15,6 +15,7 @@ export default class AddBookFormController {
         title: inputTitleValue,
         author: inputAuthorValue,
       });
+      this.addBookFormViewManager.clearInputs();
     });
   }
 }
