@@ -221,9 +221,7 @@ button {
 /* Add-New Section Component */
 
 .add-new {
-
   align-items: center;
-  
 }
 
 /* Add-Book Form Component */
@@ -258,15 +256,15 @@ button {
 }
 
 /* Contact Section */
-.contact{
-align-items: center;
+.contact {
+  align-items: center;
 }
 
 .contact p:not(:first-child) {
   margin-top: 2rem;
 }
 
-.contact-list{
+.contact-list {
   padding: 2rem 2.5rem;
-  list-style-type:disc;
+  list-style-type: disc;
 }
