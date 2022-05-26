@@ -12,12 +12,19 @@
   </head>
   <body>
     <header class="header">
+      <a href="index.html" class="logo">Awesome Books</a>
+      <nav class="user-nav">
+        <a class="user-nav__link" href="#books">List</a>
+        <a class="user-nav__link" href="#add-new">Add new</a>
+        <a class="user-nav__link" href="#contact">Contact</a>
+      </nav>
     </header>
     <main class="main">
-      <section id="books" class="books">
+      <div id="main-date-box" class="date-box"></div>
+      <section id="books" class="section books">
         <h2 class="title">All awesome books</h2>
       </section>
-      <section id="add-new" class="add-new">
+      <section id="add-new" class="section add-new is-hidden">
         <h2 class="title">Add a new book</h2>
         <form id="add-book-form" action="#" class="add-book-form">
           <input id="title" type="text" name="title" placeholder="Enter the book's title" aria-label="title" class="input">
@@ -25,7 +32,22 @@
           <button type="submit" class="btn">Add</button>
         </form>
       </section>
+      <section id="contact" class="section contact is-hidden">
+        <h1 class="title">Contact information</h1>
+        <div>
+        <p>Do you have any questions or you just want to say "Hello"?</p>
+        <p>You can reach out to us!</p>
+        <ul class="contact-list">
+          <li><strong>Our e-mail:</strong> mail@mail.com</li>
+          <li><strong>Our phone number:</strong> 00435866534422</li>
+          <li><strong>Our address:</strong> Streetname 22, 84503 City, Country</li>
+        </ul>
+      </div>
+      </section>
     </main>
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2022 Awesome Books. All Rights Reserved.</p>
+    </footer>
     <script type="module" src="scripts/main.js"></script>
   </body>
 </html>

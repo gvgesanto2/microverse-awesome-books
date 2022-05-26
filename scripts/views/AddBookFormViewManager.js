@@ -18,4 +18,19 @@ export default class AddBookFormViewManager {
   getInputAuthorValue() {
     return this.form.elements.author.value;
   }
+
+  getInputElems() {
+    const inputsArr = [];
+    Object.values(this.form.elements).forEach((formElem) => {
+      if (formElem.nodeName !== 'BUTTON' && !inputsArr.includes(formElem)) {
+        inputsArr.push(formElem);
+      }
+    });
+    return inputsArr;
+  }
+
+  clearInputs() {
+    const inputElems = this.getInputElems();
+    inputElems.forEach((input) => { input.value = ''; });
+  }
 }

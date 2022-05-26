@@ -16,12 +16,23 @@ export default class BookView {
     const bookItem = document.createElement('li');
     bookItem.className = 'book';
     bookItem.id = this.id;
-    bookItem.innerHTML = `
-      <div class="book-info">
-        <h3>${title}</h3>
-        <p>by ${author}</p>
-      <div/>
-    `;
+    const bookInfo = createNodeElem({
+      tag: 'div',
+      className: 'book-info',
+    });
+    const bookTitle = createNodeElem({
+      tag: 'h3',
+      text: title,
+    });
+    const bookAuthor = createNodeElem({
+      tag: 'p',
+      text: `by ${author}`,
+    });
+
+    bookInfo.appendChild(bookTitle);
+    bookInfo.appendChild(bookAuthor);
+    bookItem.appendChild(bookInfo);
+
     const removeBtn = createNodeElem({
       tag: 'button',
       text: 'Remove',
