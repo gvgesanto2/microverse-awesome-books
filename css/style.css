@@ -2,15 +2,19 @@
 :root {
   /* Color Palette */
   --color-primary: #1db954;
-  --color-error: rgb(212, 58, 58);
+  --color-error: #dc3545;
   --color-grey-dark-1: #58585a;
   --color-grey-dark-2: #333;
+  --color-grey-dark-3: #272a32;
   --color-grey-light-1: #f4f4f4;
   --color-grey-light-2: #cfd8dc;
   --color-grey-light-3: #b3bac5;
 
   /* Other Color Variables */
   --color-text: --color-grey-dark-2;
+
+  /* Header */
+  --header-height: 7rem;
 }
 
 /* Resetting */
@@ -51,10 +55,61 @@ button {
 
 .main {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  padding: 5rem 2rem;
+  min-height: calc(100vh - (2 * var(--header-height)));
+  padding: 0 2rem 8rem;
+}
+
+/* Header Component */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-grey-dark-3);
+  color: #fff;
+  height: var(--header-height);
+  padding: 0 4rem;
+}
+
+/* Logo Component */
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* User Navigation Component */
+
+.user-nav {
+  display: flex;
+  align-items: center;
+}
+
+.user-nav > *:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.user-nav__link {
+  padding: 2.4rem 0.5rem 2.1rem;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.user-nav__link--active,
+.user-nav__link:hover {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+/* Main Date Box Component */
+
+.date-box {
+  width: 100%;
+  text-align: end;
+  font-size: 1.2rem;
+  padding: 1.5rem 0;
+  margin-bottom: 3.5rem;
 }
 
 /* Title Component  */
@@ -65,19 +120,22 @@ button {
   font-weight: 600;
 }
 
+/* Section Component */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section .title {
+  margin-bottom: 3rem;
+}
+
 /* Books Section Component  */
 
 .books {
   width: 100%;
-  margin-bottom: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid rgb(100, 100, 100);
-  display: flex;
-  flex-direction: column;
-}
-
-.books .title {
-  margin-bottom: 2rem;
 }
 
 /* Books List Component  */
@@ -163,11 +221,8 @@ button {
 /* Add-New Section Component */
 
 .add-new {
-  text-align: center;
-}
-
-.add-new .title {
-  margin-bottom: 2rem;
+  flex: 1;
+  align-items: center;
 }
 
 /* Add-Book Form Component */
@@ -183,4 +238,20 @@ button {
 
 .add-book-form > *:not(:last-child) {
   margin-bottom: 1.5rem;
+}
+
+/* Footer Component */
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  height: var(--header-height);
+  background-color: var(--color-grey-dark-3);
+  color: #fff;
+}
+
+/* Utilities Classes */
+
+.is-hidden {
+  display: none;
 }
