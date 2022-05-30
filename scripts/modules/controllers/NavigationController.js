@@ -8,7 +8,7 @@ export default class NavigationController {
     this.screenViewManager = new ScreenViewManager();
   }
 
-  navigateTo(elemId) {
+  navigateTo = (elemId) => {
     this.screenViewManager.hide(this.currActiveSectionId);
     this.navigationViewManager.setLinkStateToDefault(this.currActiveSectionId);
 
@@ -16,7 +16,7 @@ export default class NavigationController {
     this.navigationViewManager.setLinkStateToActive(elemId);
 
     this.currActiveSectionId = elemId;
-  }
+  };
 
   handleNavigation = (event) => {
     const navLinkElem = event.target;
@@ -24,8 +24,8 @@ export default class NavigationController {
     this.navigateTo(elemToNavigateId);
   };
 
-  init() {
+  init = () => {
     this.navigationViewManager.addEventHandler(this.handleNavigation);
     this.navigationViewManager.setLinkStateToActive(this.currActiveSectionId);
-  }
+  };
 }

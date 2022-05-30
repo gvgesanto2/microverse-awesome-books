@@ -1,8 +1,8 @@
-import initialBooks from './data/books.data.js';
-import BooksListController from './controllers/BooksListController.js';
-import AddBookFormController from './controllers/AddBookFormController.js';
-import MainDateController from './controllers/MainDateController.js';
-import NavigationController from './controllers/NavigationController.js';
+import initialBooks from './modules/data/books.data.js';
+import BooksListController from './modules/controllers/BooksListController.js';
+import AddBookFormController from './modules/controllers/AddBookFormController.js';
+import MainDateController from './modules/controllers/MainDateController.js';
+import NavigationController from './modules/controllers/NavigationController.js';
 
 const BOOKS_SECTION_ID = 'books';
 const MAIN_DATE_BOX_ID = 'main-date-box';

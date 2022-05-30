@@ -7,19 +7,15 @@ export default class AddBookFormViewManager {
     this.form = document.getElementById(AddBookFormViewManager.ID);
   }
 
-  addEventHandler(callback) {
+  addEventHandler = (callback) => {
     this.form.addEventListener('submit', callback);
-  }
+  };
 
-  getInputTitleValue() {
-    return this.form.elements.title.value;
-  }
+  getInputTitleValue = () => this.form.elements.title.value;
 
-  getInputAuthorValue() {
-    return this.form.elements.author.value;
-  }
+  getInputAuthorValue = () => this.form.elements.author.value;
 
-  getInputElems() {
+  getInputElems = () => {
     const inputsArr = [];
     Object.values(this.form.elements).forEach((formElem) => {
       if (formElem.nodeName !== 'BUTTON' && !inputsArr.includes(formElem)) {
@@ -27,10 +23,12 @@ export default class AddBookFormViewManager {
       }
     });
     return inputsArr;
-  }
+  };
 
-  clearInputs() {
+  clearInputs = () => {
     const inputElems = this.getInputElems();
-    inputElems.forEach((input) => { input.value = ''; });
-  }
+    inputElems.forEach((input) => {
+      input.value = '';
+    });
+  };
 }

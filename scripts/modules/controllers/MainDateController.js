@@ -6,7 +6,7 @@ export default class MainDateController {
     this.mainDateView = new MainDateView();
   }
 
-  buildMainDate() {
+  buildMainDate = () => {
     this.mainDateView.render(this.mainDateBoxId);
-  }
+  };
 }
