@@ -10,7 +10,7 @@ export default class BooksListView {
     this.removeBookCallback = removeBookCallback;
   }
 
-  render(parentElemId) {
+  render = (parentElemId) => {
     const parentElem = document.getElementById(parentElemId);
     const booksListElem = document.createElement('ul');
     booksListElem.className = 'books-list';
@@ -21,15 +21,15 @@ export default class BooksListView {
       booksListElem.appendChild(bookElem);
     });
     parentElem.appendChild(booksListElem);
-  }
+  };
 
-  renderNewBook(newBook) {
+  renderNewBook = (newBook) => {
     const bookView = new BookView(newBook, this.removeBookCallback);
     bookView.render(this.id);
-  }
+  };
 
-  removeBookFromScreen(bookId) {
+  removeBookFromScreen = (bookId) => {
     const bookElem = document.getElementById(`${BookView.BASE_ID}-${bookId}`);
     bookElem.remove();
-  }
+  };
 }

@@ -6,7 +6,7 @@ export default class AddBookFormController {
     this.addBookFormViewManager = new AddBookFormViewManager();
   }
 
-  init() {
+  init = () => {
     this.addBookFormViewManager.addEventHandler((event) => {
       event.preventDefault();
       const inputTitleValue = this.addBookFormViewManager.getInputTitleValue();
@@ -17,5 +17,5 @@ export default class AddBookFormController {
       });
       this.addBookFormViewManager.clearInputs();
     });
-  }
+  };
 }

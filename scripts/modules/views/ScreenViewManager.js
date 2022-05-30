@@ -5,15 +5,15 @@ export default class ScreenViewManager {
     this.utilHideClass = U_HIDE_CLASS;
   }
 
-  hide(elementId) {
+  hide = (elementId) => {
     const elem = document.getElementById(elementId);
     elem.classList.add(this.utilHideClass);
-  }
+  };
 
-  show(elementId) {
+  show = (elementId) => {
     const elem = document.getElementById(elementId);
     if (elem.classList.contains(this.utilHideClass)) {
       elem.classList.remove(this.utilHideClass);
     }
-  }
+  };
 }

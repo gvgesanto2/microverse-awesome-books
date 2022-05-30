@@ -11,7 +11,7 @@ export default class BookView {
     this.removeCallback = removeCallback;
   }
 
-  createElem() {
+  createElem = () => {
     const { id, title, author } = this.book;
     const bookItem = document.createElement('li');
     bookItem.className = 'book';
@@ -39,10 +39,12 @@ export default class BookView {
       className: 'btn btn--remove',
     });
     removeBtn.type = 'button';
-    removeBtn.addEventListener('click', () => { this.removeCallback(id); });
+    removeBtn.addEventListener('click', () => {
+      this.removeCallback(id);
+    });
     bookItem.appendChild(removeBtn);
     return bookItem;
-  }
+  };
 
   render(parentElemId) {
     const parentElem = document.getElementById(parentElemId);

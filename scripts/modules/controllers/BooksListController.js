@@ -19,20 +19,20 @@ export default class BooksListController {
     this.booksListView = new BooksListView(this.books, this.removeBook);
   }
 
-  buildBooksList() {
+  buildBooksList = () => {
     this.booksListView.render(this.booksSectionId);
-  }
+  };
 
-  addBook({ title, author }) {
+  addBook = ({ title, author }) => {
     const newBook = new Book(title, author);
     this.booksListView.renderNewBook(newBook);
     this.books.push(newBook);
     this.booksListStorageController.storeBooksData(this.books);
-  }
+  };
 
   removeBook = (bookId) => {
     this.booksListView.removeBookFromScreen(bookId);
     this.books = this.books.filter((book) => book.id !== bookId);
     this.booksListStorageController.storeBooksData(this.books);
-  }
+  };
 }
