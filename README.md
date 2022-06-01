@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Awesome Books (using Classes)
+# Awesome Books
 
 > In this project, We will build a basic website that allows users to add/remove books from a list.
 
@@ -9,6 +9,11 @@
 - HTML 5
 - CSS 3
 - JavaScript
+- Webpack
+
+## Live Demo
+
+Click on this link to see this project live demo: [Live Demo Link](https://astonishing-tulumba-39f311.netlify.app)
 
 ## Getting Started
 
@@ -61,12 +66,6 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
 ## 📝 License
 
-This project is MIT licensed.
+This project is [MIT](./MIT.md) licensed.
