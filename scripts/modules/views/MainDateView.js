@@ -1,4 +1,4 @@
-import { DateTime } from '../../../node_modules/luxon/build/es6/luxon.js';
+import { DateTime } from 'luxon';
 import createNodeElem from '../utils/createElem.utils.js';
 
 const MAIN_DATE_ID = 'main-date';

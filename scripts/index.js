@@ -4,6 +4,8 @@ import AddBookFormController from './modules/controllers/AddBookFormController.j
 import MainDateController from './modules/controllers/MainDateController.js';
 import NavigationController from './modules/controllers/NavigationController.js';
 
+import '../css/style.css';
+
 const BOOKS_SECTION_ID = 'books';
 const MAIN_DATE_BOX_ID = 'main-date-box';
 const NAV_LINKS_CLASS_SELECTOR = '.user-nav__link';
