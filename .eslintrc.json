@@ -20,6 +20,7 @@
   },
   "ignorePatterns": [
     "dist/",
-    "build/"
+    "build/",
+    "scripts/vendors/" // This line will disable the Eslint for all the files inside this folder
   ]
 }
