@@ -2,12 +2,13 @@ import { getIdsFromElemsArray } from '../utils/id.utils.js';
 import BooksListView from '../views/BooksListView.js';
 import BooksListStorageController from './BooksListStorageController.js';
 import Book from '../models/Book.js';
+import BooksList from '../models/BooksList.js';
 
 export default class BooksListController {
   constructor(booksSectionId, initialBooks) {
     this.booksListStorageController = new BooksListStorageController();
     const booksStored = this.booksListStorageController.getBooksData();
-    this.books = booksStored.length > 0
+    const books = booksStored.length > 0
       ? [
         ...initialBooks,
         ...booksStored.filter(
@@ -15,8 +16,9 @@ export default class BooksListController {
         ),
       ]
       : initialBooks;
+    this.booksListView = new BooksListView(books, this.removeBook);
+    this.booksList = new BooksList(books);
     this.booksSectionId = booksSectionId;
-    this.booksListView = new BooksListView(this.books, this.removeBook);
   }
 
   buildBooksList = () => {
@@ -26,13 +28,13 @@ export default class BooksListController {
   addBook = ({ title, author }) => {
     const newBook = new Book(title, author);
     this.booksListView.renderNewBook(newBook);
-    this.books.push(newBook);
-    this.booksListStorageController.storeBooksData(this.books);
+    this.booksList.push(newBook);
+    this.booksListStorageController.storeBooksData(this.booksList.getBooks);
   };
 
   removeBook = (bookId) => {
     this.booksListView.removeBookFromScreen(bookId);
-    this.books = this.books.filter((book) => book.id !== bookId);
-    this.booksListStorageController.storeBooksData(this.books);
+    this.booksList.remove(bookId);
+    this.booksListStorageController.storeBooksData(this.booksList.getBooks);
   };
 }
